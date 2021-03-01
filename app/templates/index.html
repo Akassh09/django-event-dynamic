@@ -55,8 +55,8 @@ div.desc2 {
     <img src="{{evt.img.url}}" alt="Event img" width="800" height="400">
   </a>
   <div class="desc1">{{evt.name}}</div>
+  <div class="desc2">{{evt.time}}, {{evt.date}}</div>
   <div class="desc2">{{evt.loc}}</div>
-  <div class="desc2">{{evt.date}}</div>
 </div>
 {% endfor %}
 <footer class="footer" >
@@ -65,8 +65,10 @@ div.desc2 {
   {% csrf_token %}
   Name: <input type="text" name="name"/><br><br>
   Location: <input type="text" name="loc"/><br><br>
-  Image: <input type="file" name="img"><br><br>
-  <input type="submit" value="Post"/>
+  Date: <input type="date" id="date" name="date"/><br><br>
+  time: <input type="time" id="time" name="time"/><br
+  Image: <input type="file" id='img' name="img"><br><br>
+  <input type="submit" value="Submit"/>
 </form>
 </footer>
 </body>
